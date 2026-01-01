@@ -1,12 +1,18 @@
-# QAE-CyberDefense
-implementation of a Quantum Autoencoder (QAE) for DDoS attack detection using quantum-enhanced anomaly detection and latent space analysis. 
+# QAE-CyberDefense: Quantum Autoencoder for DDoS Detection
 
+This repository contains a Hybrid Quantum-Classical Autoencoder implementation specifically designed to detect DDoS attacks using the UNSW-NB15 dataset. The system leverages quantum variational circuits to learn compressed representations of network traffic and identify cyber threats through anomaly detection.
 
-Prasyarat & Instalasi
+# Prerequisites & Installation
 
-Pastikan kamu memiliki Python 3.8+ dan telah menginstal library yang diperlukan dengan cara 
-melakukan pip install requirements.txt jika tidak bisa seusaikan versi python anda dengan library anda.
+Ensure you have Python 3.8+ installed. You can install the required libraries using the following command:
+pip install requirements.txt
+Note: If you encounter installation errors, please ensure your Python version is compatible with the library versions specified in the requirements file.
 
-data menggunakan unsw nb-15 
-data di scaled menjadi 10 ribu  dan menghilangkan fitur fitur yang tidak di perlukan dan juga memisahkan data normal dan data anomaly
-anda ajuga bisa menyesuaikan qubit dari fitu fitur yang anda punya 
+# Data Preprocessing (UNSW-NB15)
+The model utilizes the UNSW-NB15 dataset, processed with the following steps:Feature Selection: Irrelevant features were removed to optimize quantum state encoding.
+
+Scaling & Sampling: The dataset is scaled down to 10,000 samples for efficient quantum simulation.
+
+Data Separation: Normal traffic and anomaly (DDoS) data are separated to facilitate unsupervised learning.
+
+Normalization: All numerical features are normalized to fit within the $[0, \pi]$ range for quantum angle encoding.
